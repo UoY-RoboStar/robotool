@@ -90,15 +90,13 @@
       <requirement
           name="circus.robocalc.robochart.assertions.feature.feature.group"/>
       <requirement
-          name="circus.robocalc.robochart.generator.cpp.feature.feature.group"/>
-      <requirement
           name="circus.robocalc.robochart.generator.csp.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.csp.comparison.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robochart.graphical.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robochart.feature.feature.group"/>
+      <requirement
+          name="circus.robocalc.robochart.textual.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robochart.textual.exporter.feature.feature.group"/>
       <requirement
@@ -107,8 +105,6 @@
           name="circus.robocalc.robochart.generator.prism.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robochart.refactoring.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.textual.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robochart2sim.textual.feature.feature.group"/>
       <requirement
@@ -122,17 +118,23 @@
       <requirement
           name="circus.robocalc.robosim.textual.feature.feature.group"/>
       <requirement
+          name="circus.robocalc.robosim.physmod.graphical.feature.feature.group"/>
+      <requirement
           name="circus.robocalc.robosim.physmod.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robosim.physmod.textual.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.physmod.graphical.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robosim.physmod.generator.cpc.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robosim.physmod.generator.sdf.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robotool.versioning.feature.feature.group"/>
+      <requirement
+          name="robostar.robocert.feature.feature.group"/>
+      <requirement
+          name="robostar.robocert.textual.feature.feature.group"/>
+      <requirement
+          name="circus.robocalc.robochart.tracegen.feature.feature.group"/>
       <repository
           url="https://download.eclipse.org/epsilon/updates/2.4"/>
       <repository
@@ -142,7 +144,57 @@
       <repository
           url="https://archive.eclipse.org/sirius/updates/releases/6.5.1/2020-09"/>
       <repository
-          url="https://robostar.cs.york.ac.uk/robotool/update"/>
+          url="https://robostar.cs.york.ac.uk/robotool/metamodel/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/textual/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/csp-generator/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/assertions/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/graphical/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/prism-metamodel/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/prism-generator/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/importer/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/exporter/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/csp-comparison/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robosim-metamodel/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robosim-textual/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robosim-graphical/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robosim-assertions/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robosim-generator/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/physmod-metamodel/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/physmod-textual/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/physmod-graphical/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/physmod-cpc-generator/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robotool-versioning/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/refactoring/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robochart2sim/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robocert-metamodel/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robocert-textual/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/robochart-tracegen/update"/>
+      <repository
+          url="https://robostar.cs.york.ac.uk/robotool/physmod-sdf-generator/update"/>
     </setupTask>
     <description>RoboTool for Eclipse 2021-12.</description>
   </version>
