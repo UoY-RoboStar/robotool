@@ -110,8 +110,6 @@
       <requirement
           name="circus.robocalc.robochart.textual.feature.feature.group"/>
       <requirement
-          name="circus.robocalc.robochart.tracegen.feature.feature.group"/>
-      <requirement
           name="circus.robocalc.robochart2sim.textual.feature.feature.group"/>
       <requirement
           name="circus.robocalc.robosim.assertions.feature.feature.group"/>
@@ -145,26 +143,6 @@
           url="https://archive.eclipse.org/sirius/updates/releases/6.5.1/2020-09"/>
       <repository
           url="https://robostar.cs.york.ac.uk/robotool/update"/>
-    </setupTask>
-    <setupTask
-        xsi:type="setup.p2:P2Task"
-        label="JRE 17.0.9">
-      <annotation
-          source="http://www.eclipse.org/oomph/setup/JRESpecificTasks">
-        <content
-            xsi:type="setup:EclipseIniTask"
-            option="--add-opens=java.base/java.lang=ALL-UNNAMED"
-            vm="true"/>
-      </annotation>
-      <requirement
-          name="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group"
-          filter="(|(&amp;(osgi.arch=aarch64)(osgi.os=linux))(&amp;(osgi.arch=aarch64)(osgi.os=macosx))(&amp;(osgi.arch=ppc64le)(osgi.os=linux))(&amp;(osgi.arch=x86_64)(osgi.os=linux))(&amp;(osgi.arch=x86_64)(osgi.os=macosx))(&amp;(osgi.arch=x86_64)(osgi.os=win32)))"/>
-      <repository
-          url="https://download.eclipse.org/justj/jres/17/updates/release/latest"/>
-      <description>
-        Contains the plug-ins and fragments for the Adoptium OpenJDK Hotspot JRE Complete.
-        Provides the complete set of modules of the JDK, excluding incubators.
-      </description>
     </setupTask>
     <description>RoboTool for Eclipse 2021-12.</description>
   </version>
