@@ -20,6 +20,11 @@ Version Update 3.1.0 : Nov 2022
 	<packaging>eclipse-plugin</packaging>
 
 	<properties>
+		<RELEASE_NAME>2021-12</RELEASE_NAME>
+	  <RELEASE_VERSION>4.22.0</RELEASE_VERSION>
+	  <eclipse.simultaneous.release.build>${maven.build.timestamp}</eclipse.simultaneous.release.build>
+	  <eclipse.simultaneous.release.name>${RELEASE_NAME} (${RELEASE_VERSION})</eclipse.simultaneous.release.name>
+	 
 	  <tycho-version>2.7.5</tycho-version>
 	 </properties>
 
@@ -31,7 +36,48 @@ Version Update 3.1.0 : Nov 2022
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
 			</plugin>
-			
+			<plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <version>2.7</version>
+                        <executions>
+                            <execution>
+                                <id>process-about.mappings</id>
+                                <phase>prepare-package</phase>
+                                <configuration>
+                                    <outputDirectory>${project.build.directory}</outputDirectory>
+                                    <overwrite>true</overwrite>
+                                    <resources>
+                                        <resource>
+                                            <directory>${basedir}</directory>
+                                            <includes>
+                                                <include>about.mappings</include>
+                                            </includes>
+                                            <filtering>true</filtering>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                                <goals>
+                                    <goal>copy-resources</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+              <plugin>
+                        <groupId>org.eclipse.tycho</groupId>
+                        <artifactId>tycho-packaging-plugin</artifactId>
+                        <version>${tycho-version}</version>
+                        <configuration>
+                            <additionalFileSets>
+                                <fileSet>
+                                    <directory>${project.build.directory}</directory>
+                                    <includes>
+                                        <include>about.mappings</include>
+                                    </includes>
+                                </fileSet>
+                            </additionalFileSets>
+                        </configuration>
+                    </plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
