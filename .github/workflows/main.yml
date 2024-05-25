@@ -58,11 +58,18 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           body: |
+            RoboTool compiled and packaged as an Eclipse product using Eclipse tycho's Maven builder. 
+
+            Note that binaries are not signed. In particular, when downloaded and extracted under macOS may need [dequarantining](https://superuser.com/questions/526920/how-to-remove-quarantine-from-file-permissions-in-os-x) using the command `xattr -d com.apple.quarantine Eclipse.app` to avoid a message saying that the binary is damaged.
+            
             <details>
+            <summary>Main feature versions</summary>
+            
             Feature | Version
             --------|--------
             ${{ steps.versions.outputs.content }}
             --------|--------
+            
             </details>
           files: |
             robotool-product/target/products/*.tar.gz
