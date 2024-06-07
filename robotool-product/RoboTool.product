@@ -77,6 +77,8 @@
       <feature id="circus.robocalc.robosim.physmod.textual.feature" installMode="root"/>
       <feature id="circus.robocalc.robosim.physmod.generator.cpc.feature" installMode="root"/>
       <feature id="circus.robocalc.robosim.physmod.generator.sdf.feature" installMode="root"/>
+      <feature id="circus.robocalc.robotest.drivergen.feature" installMode="root"/>
+      <feature id="circus.robocalc.robotest.rostest.feature" installMode="root"/>
       <feature id="circus.robocalc.robotool.versioning.feature" installMode="root"/>
       <feature id="circus.robocalc.robochart.tracegen.feature" installMode="root"/>
       <feature id="robostar.robocert.feature" installMode="root"/>
