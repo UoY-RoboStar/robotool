@@ -136,6 +136,11 @@
             <layout>p2</layout>
         </repository>
         <repository>
+			<id>orbit</id>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20211213173813/repository</url>
+			<layout>p2</layout>
+		</repository>        
+        <repository>
             <id>epsilon</id>
             <url>https://download.eclipse.org/epsilon/updates/2.4</url>
             <layout>p2</layout>
