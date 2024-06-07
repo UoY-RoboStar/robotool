@@ -42,6 +42,10 @@
       <feature id="org.eclipse.epp.package.rcp.feature" version="4.22.0.qualifier"/>
       <feature id="org.eclipse.platform" version="4.22.0.qualifier"/>
       <feature id="org.eclipse.rcp"/>
+      <feature id="org.eclipse.epsilon.core" version="2.4.0.qualifier" installMode="root"/>
+      <feature id="org.eclipse.epsilon.core.dt" version="2.4.0.qualifier" installMode="root"/>
+      <feature id="org.eclipse.epsilon.emf" version="2.4.0.qualifier" installMode="root"/>
+      <feature id="org.eclipse.epsilon.emf.dt" version="2.4.0.qualifier" installMode="root"/>
       <feature id="org.eclipse.egit" installMode="root"/>
       <feature id="org.eclipse.oomph.setup" installMode="root"/>
       <feature id="org.eclipse.xtext.sdk" installMode="root"/>
