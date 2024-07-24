@@ -1,0 +1,5 @@
+instructions.configure=\
+removeRepository(type:0,location:https${#58}//download.eclipse.org/technology/epp/packages/latest/);\
+removeRepository(type:1,location:https${#58}//download.eclipse.org/technology/epp/packages/latest/);\
+removeRepository(type:0,location:https${#58}//download.eclipse.org/releases/latest);\
+removeRepository(type:1,location:https${#58}//download.eclipse.org/releases/latest);

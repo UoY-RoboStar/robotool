@@ -1,0 +1,78 @@
+<project>
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>robostar.robotool</groupId>
+ <artifactId>robotool</artifactId>
+ <version>1.0.0-SNAPSHOT</version>
+ <packaging>pom</packaging>
+
+ <properties>
+  <tycho-version>2.7.5</tycho-version>
+  <xtextVersion>2.25.0</xtextVersion>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <eclipse-repo.url>https://download.eclipse.org/releases/2021-12</eclipse-repo.url>
+  <robotool.url>https://robostar.cs.york.ac.uk/robotool/update</robotool.url>
+ </properties>
+
+ <build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>attach-p2-metadata</id>
+						<phase>package</phase>
+						<goals>
+							<goal>p2-metadata</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>target-platform-configuration</artifactId>
+                <version>${tycho-version}</version>
+                <configuration>
+                    <includePackedArtifacts>true</includePackedArtifacts>
+                    <environments>
+                        <environment>
+                            <os>win32</os>
+                            <ws>win32</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                        <environment>
+                            <os>linux</os>
+                            <ws>gtk</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                            <environment>
+                                <os>macosx</os>
+                                <ws>cocoa</ws>
+                                <arch>x86_64</arch>
+                        </environment>
+                    </environments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-versions-plugin</artifactId>
+                <version>${tycho-version}</version>
+            </plugin>
+     </plugins>
+</build>
+<modules>
+  <module>robotool-customization</module>
+  <module>robotool-customization-repository</module>
+  <module>robotool-feature</module>
+  <module>robotool-product</module>
+   <!--TODO ADD YOUR MODULES HERE-->
+ </modules>
+</project>

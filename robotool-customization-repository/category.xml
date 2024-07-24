@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="robostar.robotool.customization.feature" version="0.0.0">
+      <category name="robostar.robotool.customization"/>
+   </feature>
+   <category-def name="robostar.robotool.customization" label="RoboTool Product"/>
+</site>
