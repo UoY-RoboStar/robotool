@@ -36,11 +36,11 @@
                value="Welcome to RoboTool"/>
          <property
                name="aboutImage"
-               value="eclipse_lg.png">
+               value="RoboStar-banner.png">
          </property>
          <property
                name="windowImages"
-               value="eclipse16.png,eclipse32.png,eclipse48.png,eclipse256.png">
+               value="robotool16.png,robotool32.png,robotool48.png,robotool256.png">
          </property>
          <property
               name="introBrandingImage"
