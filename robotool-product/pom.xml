@@ -30,29 +30,84 @@
       <artifactId>tycho-p2-repository-plugin</artifactId>
       <version>${tycho.version}</version>
       <configuration>
+        <!-- Both? options required to prevent tycho from generating .xz files. -->
+        <compress>false</compress>
+        <xzCompress>false</xzCompress>
         <includeAllDependencies>true</includeAllDependencies>
       </configuration>
     </plugin>
+    <!--<plugin>
+      <artifactId>exec-maven-plugin</artifactId>
+      <version>1.6.0</version>
+        <groupId>org.codehaus.mojo</groupId>
+        <executions>
+            <execution>This is necessary to remove touchpoints from eclipse core packages from usnig jvmArgs,
+                which then later on endup in eclipse.ini. We fix it here before generating the product below.
+                <id>target-repository-xslt</id>
+                <phase>package</phase>
+                <goals>
+                    <goal>exec</goal>
+                </goals>
+                <configuration>
+                    <executable>/usr/bin/xsltproc</executable>
+                    <commandlineArgs>-o target/repository/content.xml content.xslt target/repository/content.xml</commandlineArgs>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>-->
+    <plugin>
+      <!-- In here we apply an XSLT transformation to context.xml under /target/repository to remove
+           certain touchpoints from installation units with ids starting with 'toolingorg.eclipse.platform.ide.ini'
+           from including jvmArgs that include -Xmx and similar.
+           
+           From the code that implements such logic, it seems impossible to remove such touchpoints later on,
+           with P2 instead choosing the 'largest' value. If no '-Xmx' (maximum heap size) is desirable, then
+           the only option is to remove it. We do that here via XSLT before materializing the product later.
+           
+           Alternative way of applying XSLT above via command line too. -->
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>xml-maven-plugin</artifactId>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>transform</goal>
+          </goals>
+        </execution>
+      </executions>
+      <configuration>
+        <forceCreation>true</forceCreation>
+        <transformationSets>
+          <transformationSet>
+            <includes>
+              <include>content.xml</include>
+            </includes>
+            <dir>target/repository</dir>
+            <outputDir>target/repository</outputDir>
+            <stylesheet>content.xslt</stylesheet>
+          </transformationSet>
+        </transformationSets>
+      </configuration>
+    </plugin>
   	<plugin>
-         <groupId>org.eclipse.tycho</groupId>
+      <groupId>org.eclipse.tycho</groupId>
          <artifactId>tycho-p2-director-plugin</artifactId>
          <version>${tycho.version}</version>
          <executions>
 		    <execution>
 		      <id>create-product-distributions</id>
+          <phase>package</phase>
 		      <goals>
 		        <goal>materialize-products</goal>
 		        <goal>archive-products</goal>
 		      </goals>
 		    </execution>
 		  </executions>
-		  <!--<configuration>
-		    <products>
-		      <product>
-		      	<id>RoboTool</id>
-		      </product>
-		    </products>
-		  </configuration>-->
+      <configuration>
+        <!-- Usually this would be the default, targetPlatformRepository, but because we want to pick
+             that that has been transformed by XSLT above, we manually specify it here. -->
+        <source>repository</source>
+      </configuration>
 		</plugin>
    <plugin>
     <groupId>org.eclipse.tycho</groupId>
