@@ -40,7 +40,7 @@
          </property>
          <property
                name="windowImages"
-               value="robotool16.png,robotool32.png,robotool48.png,robotool256.png">
+               value="robotool16.png,robotool32.png,robotool48.png,robotool128.png,robotool256.png">
          </property>
          <property
               name="introBrandingImage"
