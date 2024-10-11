@@ -10,10 +10,7 @@
       <vmArgs>-Dosgi.requiredJavaVersion=17
 -Dosgi.instance.area.default=@user.home/eclipse-workspace
 -Dsun.java.command=Eclipse
--Xms256m
--Xmx2048m
--XX:+UseG1GC
--XX:+UseStringDeduplication
+-Xms512m
 --add-modules=ALL-SYSTEM
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
