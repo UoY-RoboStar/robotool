@@ -80,6 +80,9 @@
       <feature id="circus.robocalc.robochart.tracegen.feature" installMode="root"/>
       <feature id="robostar.robocert.feature" installMode="root"/>
       <feature id="robostar.robocert.textual.feature" installMode="root"/>
+      <feature id="circus.robocalc.roboarch.feature" installMode="root"/>
+      <feature id="circus.robocalc.roboarch.textual.feature" installMode="root"/>
+      <feature id="circus.robocalc.roboarch.epsilon.feature" installMode="root"/>
       <feature id="org.eclipse.justj.openjdk.hotspot.jre.full" installMode="root"/>
    </features>
 
