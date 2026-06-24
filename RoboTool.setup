@@ -39,114 +39,64 @@
     <setupTask
         xsi:type="setup:CompoundTask"
         name="preferences">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui.editors/lineNumberRuler"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.core.resources/refresh.enabled"
-          value="true"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.core.resources/encoding"
-          value="UTF-8"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui/showIntro"
-          value="false"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui/defaultPerspectiveId"
-          value="org.eclipse.sirius.ui.tools.perspective.modeling"/>
+      <setupTask xsi:type="setup:PreferenceTask" key="/instance/org.eclipse.ui.editors/lineNumberRuler" value="true"/>
+      <setupTask xsi:type="setup:PreferenceTask" key="/instance/org.eclipse.core.resources/refresh.enabled" value="true"/>
+      <setupTask xsi:type="setup:PreferenceTask" key="/instance/org.eclipse.core.resources/encoding" value="UTF-8"/>
+      <setupTask xsi:type="setup:PreferenceTask" key="/instance/org.eclipse.ui/showIntro" value="false"/>
+      <setupTask xsi:type="setup:PreferenceTask" key="/instance/org.eclipse.ui/defaultPerspectiveId" value="org.eclipse.sirius.ui.tools.perspective.modeling"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
         label="${scope.product.label} (${scope.product.version.label})">
-      <annotation
-          source="https://download.eclipse.org/oomph/www/setups/http/git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/keys/trusted-keys.asc"/>
-      <requirement
-          name="org.eclipse.oomph.setup.feature.group"/>
-      <requirement
-          name="org.eclipse.platform.ide"/>
-      <requirement
-          name="org.eclipse.platform.feature.group"/>
-      <requirement
-          name="org.eclipse.rcp.feature.group"/>
-      <requirement
-          name="org.eclipse.egit.feature.group"/>
-      <requirement
-          name="org.eclipse.xtext.sdk.feature.group"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.feature.group"/>
-      <requirement
-          name="org.eclipse.sirius.properties.feature.feature.group"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.ui.feature.group"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.aql.feature.group"/>
-      <requirement
-          name="circus.robocalc.prism.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.assertions.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.generator.csp.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.graphical.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.textual.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.csp.comparison.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.textual.exporter.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.textual.importer.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.generator.prism.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.refactoring.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart2sim.textual.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.assertions.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.generator.csp.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.graphical.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.textual.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.physmod.graphical.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.physmod.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.physmod.textual.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.physmod.generator.cpc.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robosim.physmod.generator.sdf.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robotool.versioning.feature.feature.group"/>
-      <requirement
-          name="robostar.robocert.feature.feature.group"/>
-      <requirement
-          name="robostar.robocert.textual.feature.feature.group"/>
-      <requirement
-          name="circus.robocalc.robochart.tracegen.feature.feature.group"/>
-      <repository
-          url="https://download.eclipse.org/epsilon/updates/2.4"/>
-      <repository
-          url="https://download.eclipse.org/eclipse/updates/4.22"/>
-      <repository
-          url="https://download.eclipse.org/releases/2021-12"/>
-      <repository
-          url="https://archive.eclipse.org/sirius/updates/releases/6.5.1/2020-09"/>
-      <repository
-          url="https://robostar.cs.york.ac.uk/robotool/update"/>
+      <annotation source="https://download.eclipse.org/oomph/www/setups/http/git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/keys/trusted-keys.asc"/>
+      <requirement name="org.eclipse.oomph.setup.feature.group"/>
+      <requirement name="org.eclipse.platform.ide"/>
+      <requirement name="org.eclipse.platform.feature.group"/>
+      <requirement name="org.eclipse.rcp.feature.group"/>
+      <requirement name="org.eclipse.egit.feature.group"/>
+      <requirement name="org.eclipse.xtext.sdk.feature.group"/>
+      <requirement name="org.eclipse.sirius.runtime.feature.group"/>
+      <requirement name="org.eclipse.sirius.properties.feature.feature.group"/>
+      <requirement name="org.eclipse.sirius.runtime.ide.ui.feature.group"/>
+      <requirement name="org.eclipse.sirius.runtime.aql.feature.group"/>
+      <requirement name="circus.robocalc.prism.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.assertions.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.generator.csp.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.graphical.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.textual.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.csp.comparison.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.textual.exporter.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.textual.importer.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.generator.prism.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.refactoring.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart2sim.textual.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.assertions.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.generator.csp.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.graphical.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.textual.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.physmod.graphical.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.physmod.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.physmod.textual.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.physmod.generator.cpc.feature.feature.group"/>
+      <requirement name="circus.robocalc.robosim.physmod.generator.sdf.feature.feature.group"/>
+      <requirement name="circus.robocalc.robotest.drivergen.feature.feature.group"/>
+      <requirement name="circus.robocalc.robotest.rostest.feature.feature.group"/>
+      <requirement name="circus.robocalc.robotool.versioning.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.tracegen.feature.feature.group"/>
+      <requirement name="robostar.robocert.feature.feature.group"/>
+      <requirement name="robostar.robocert.textual.feature.feature.group"/>
+      <requirement name="circus.robocalc.robochart.tracegen.feature.feature.group"/>
+      <requirement name="circus.robocalc.roboarch.feature.feature.group"/>
+      <requirement name="circus.robocalc.roboarch.textual.feature.group"/>
+      <requirement name="circus.robocalc.roboarch.epsilon.feature.group"/>
+      <requirement name="circus.robocalc.robochart.epsilon.isacircus.feature.group"/>
+      <repository url="https://download.eclipse.org/epsilon/updates/2.4"/>
+      <repository url="https://download.eclipse.org/eclipse/updates/4.22"/>
+      <repository url="https://download.eclipse.org/releases/2021-12"/>
+      <repository url="https://archive.eclipse.org/sirius/updates/releases/6.5.1/2020-09"/>
+      <repository url="https://robostar.cs.york.ac.uk/robotool/update"/>
     </setupTask>
     <description>RoboTool for Eclipse 2021-12.</description>
   </version>
